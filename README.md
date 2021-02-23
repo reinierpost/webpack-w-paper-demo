@@ -7,15 +7,15 @@ I'd like to create some browser applications that let the user play around with 
 [Paper.js](http://paperjs.org/) appears to suit my needs perfectly.
 
 The apps must be self-contained: ideally, the user can just unpack the files, point their browser at them and use the application, even when offline.
-So paper.js, and any other dependencies, must be bundled with releases. Webpack can do this, but not out of the box.
+So paper.js, and any other dependencies, must be bundled with releases. [Webpack](https://webpack.js.org/) can do this, but it doesn't support paperscript out of the box.
 
 This project documents my attempts to make it work.
-I'm new to modern JavaScript, npm, and to npm modules, paper.js and webpack in particular, so this is a novice playing with newfound toys.
-The configuration after [the first commit](commit/b1f0ec94b6225d882e0754dc0816eba670070164) hurts the eyes, but it works for me.
+I'm new to modern JavaScript, _npm_, _paper.js_ and _webpack_, so this is a novice playing with newfound toys.
+The configuration after [the first commit](https://github.com/reinierpost/webpack-w-paper-demo/tree/b1f0ec94b6225d882e0754dc0816eba670070164) hurts the eyes, but it works for me.
 Future commits will try a bunch of improvements, such as a [paper loader](https://github.com/aprowe/paper-loader).
 
 Setting up
-----------
+----------  
 This is what I did on an Ubuntu 18.04 host.
 
 - This app uses npm modules, so it is an npm module. (Unpublished for now.)
