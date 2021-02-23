@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      canvas[resize] {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+
+    <script type="text/paperscript" canvas="myCanvas">
+    	// adapted from http://paperjs.org/tutorials/getting-started/working-with-paper-js/
+      var path = new Path.Circle({
+      	center: view.center,
+      	radius: view.center / 2,
+      	strokeColor: 'green',
+      });
+
+      function onResize(event) {
+      	// Whenever the window is resized, recenter the path:
+        path.strokeWidth = view.size.width / 10;
+      	path.position = view.center;
+      }
+    </script>
+
+  </head>
+
+  <body style="displaystyle: block">
+
+     <div>Here is our canvas:</div>
+     <div style="border: 1px solid orange"><canvas id="myCanvas" resize></canvas></div>
+     <div>Nice, isn't it?</div>
+
+  </body>
+</html>
